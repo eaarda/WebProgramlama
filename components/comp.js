@@ -55,7 +55,6 @@ Vue.component('dortlu',{
             <div class="wrapper">
                 <div class="header-top"><a href="https://www.ceptesok.com/" class="header-logo"><img src="./Anasayfa - CEPTE ŞOK_files/logo.svg"></a></div>
                 <div class="header-mid">
-                    <button class="mid-mobile-menutrigger mobilemenu-trigger"><i class="icon-menu menutrigger-icon"></i> <span class="menutrigger-text">Kategoriler</span> <span class="menutrigger-icon-search"><i class="icon-search"></i></span></button> 
                     <div class="mid-left">
                         <div class="left-button not-selected">
                             <i class="button-icon icon-store-location"></i> 
