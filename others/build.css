@@ -38,7 +38,6 @@
 }
 [class*=" icon-"]:before,[class^=icon-]:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -49,7 +48,6 @@
 }
 .iconstyle{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -848,7 +846,6 @@ h1,h2,h3,h4,h5,h6{
 }
 .btn.loading:after{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -1024,7 +1021,6 @@ h1,h2,h3,h4,h5,h6{
 }
 .inputwrap .password-peek:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -1045,7 +1041,6 @@ h1,h2,h3,h4,h5,h6{
 }
 .inputwrap.type-password.input-full.input-peek .password-peek:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -1154,7 +1149,6 @@ h1,h2,h3,h4,h5,h6{
 }
 .checkwrap input+label>span:first-of-type:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -1310,7 +1304,6 @@ h1,h2,h3,h4,h5,h6{
 }
 .accordion-container .accordion-element .accordion-button .accordion-indicator:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -1358,7 +1351,6 @@ h1,h2,h3,h4,h5,h6{
 }
 .accordion-container .accordion-element.accordion-collapsed .accordion-button .accordion-indicator:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -1406,7 +1398,6 @@ h1,h2,h3,h4,h5,h6{
 }
 .accordion-container.accordion-big .accordion-element .accordion-button .accordion-indicator:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -1430,7 +1421,6 @@ h1,h2,h3,h4,h5,h6{
 }
 .accordion-container.accordion-big .accordion-element.accordion-collapsed .accordion-button .accordion-indicator:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -2055,7 +2045,6 @@ h1,h2,h3,h4,h5,h6{
 }
 .currency:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -2113,7 +2102,6 @@ h1,h2,h3,h4,h5,h6{
 }
 #mesaj-alani .message .message-close:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -2374,7 +2362,6 @@ h1,h2,h3,h4,h5,h6{
 }
 .numberbox .numberbox-button:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -2391,7 +2378,6 @@ h1,h2,h3,h4,h5,h6{
 }
 .numberbox .numberbox-button.number-decrease:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -3947,7 +3933,6 @@ footer .brand-logo{
 }
 #mobilemenu .list-button:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -3992,7 +3977,6 @@ footer .brand-logo{
 }
 #mobilemenu .submenu-back:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -4153,7 +4137,6 @@ footer .brand-logo{
 }
 .kısım.breadcrumbs .breadcrumbs-list li+li:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -4426,7 +4409,6 @@ footer .brand-logo{
 }
 .kısım.header-offer .offer-expand .expand-inner:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -4792,7 +4774,6 @@ footer .brand-logo{
 }
 .kısım.home-banner-howto .howto-expand .expand-inner:before{
     font-family:icomoon!important;
-    speak:none;
     font-style:normal;
     font-weight:400;
     font-variant:normal;
@@ -6820,7 +6801,6 @@ footer .brand-logo{
     }
     header .usercontrols-icon:after{
         font-family:icomoon!important;
-        speak:none;
         font-style:normal;
         font-weight:400;
         font-variant:normal;
