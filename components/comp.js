@@ -20,22 +20,22 @@ Vue.component('dortlu',{
           items:[{
               baslik:"Haftanın Fırsatları",
               link:"https://www.ceptesok.com/kampanyalar",
-              resim:"./Anasayfa - CEPTE ŞOK_files/5244715d14cde646a6083ef107f65e5b.jpg"
+              resim:"./resimler/5244715d14cde646a6083ef107f65e5b.jpg"
             },
             {
               baslik:"Stoklarla Sınırlı",
               link:"https://www.ceptesok.com/stoklarla-sinirli",
-              resim:"./Anasayfa - CEPTE ŞOK_files/e6bbd20780d79e9bcf169b96ac759868.jpg"
+              resim:"./resimler/e6bbd20780d79e9bcf169b96ac759868.jpg"
             },
             {
                 baslik:"Şok'a Özel Fırsatlar",
                 link:"https://www.ceptesok.com/sok-a-ozel-firsatlar",
-                resim:"./Anasayfa - CEPTE ŞOK_files/a4002e58c5e778693dabc2dc7d4841d9.jpg"
+                resim:"./resimler/a4002e58c5e778693dabc2dc7d4841d9.jpg"
             },
             {
                 baslik:"Çok Satanlar",
                 link:"https://www.ceptesok.com/cok-satanlar",
-                resim:"./Anasayfa - CEPTE ŞOK_files/9d4957e0cbb735a0292af5fcc2ecaba5.jpg"
+                resim:"./resimler/9d4957e0cbb735a0292af5fcc2ecaba5.jpg"
               }
         ]
        }
@@ -53,7 +53,7 @@ Vue.component('dortlu',{
     <header>
         <div class="header-inner">
             <div class="wrapper">
-                <div class="header-top"><a href="https://www.ceptesok.com/" class="header-logo"><img src="./Anasayfa - CEPTE ŞOK_files/logo.svg"></a></div>
+                <div class="header-top"><a href="https://www.ceptesok.com/" class="header-logo"><img src="./resimler/logo.svg"></a></div>
                 <div class="header-mid">
                     <div class="mid-left">
                         <div class="left-button not-selected">
@@ -109,7 +109,7 @@ Vue.component('dortlu',{
             </div>
         </div>
         <div class="topmenu">
-            <div class="menu-banners"><a href="https://www.ceptesok.com/kampanyalar#/" class="banners-banner imagefit"><img src="./Anasayfa - CEPTE ŞOK_files/55b1299dbab692fb2c8a3881fdf9d912.jpg" class="imagefit-img abs"></a><a href="https://www.ceptesok.com/taze-meyve-sebze#/" class="banners-banner imagefit"><img src="./Anasayfa - CEPTE ŞOK_files/36adde3b21ae3d9aedf0d4694742dbef.jpg" class="imagefit-img abs"></a></div>
+            <div class="menu-banners"><a href="https://www.ceptesok.com/kampanyalar#/" class="banners-banner imagefit"><img src="./resimler/55b1299dbab692fb2c8a3881fdf9d912.jpg" class="imagefit-img abs"></a><a href="https://www.ceptesok.com/taze-meyve-sebze#/" class="banners-banner imagefit"><img src="./resimler/36adde3b21ae3d9aedf0d4694742dbef.jpg" class="imagefit-img abs"></a></div>
             <div class="menu-wrap wrapper">
                 <div id="menu-mobile" class="menu-content active">
                     <ul class="menu-items">
@@ -2229,7 +2229,7 @@ Vue.component('dortlu',{
                                     <div class="grid-row">
                                         <div class="grid-col nogap-top form-alternatives">
                                             <div class="col-xs-12 padding-reset clickshow notoggle" data-subject="member-register" data-clickshow-group="member-sections">
-                                                <div class="col-xs-6 xs-pl0 xs-pb0"><span class="btn btnFaceBook flexRow xs-textleft" style="background-color: blue; color: white;"><img src="./Anasayfa - CEPTE ŞOK_files/facebook.svg" alt="">
+                                                <div class="col-xs-6 xs-pl0 xs-pb0"><span class="btn btnFaceBook flexRow xs-textleft" style="background-color: blue; color: white;"><img src="./resimler/facebook.svg" alt="">
                                                     Facebook ile  giriş yap.
                                                     </span>
                                                 </div>
@@ -2277,7 +2277,7 @@ Vue.component('dortlu',{
                                 </div>
                                 <div id="member-register" class="login-form register clickshow-subject noanim grid-container narrow-vertical inputform">
                                     <div class="col-xs-12 padding-reset">
-                                        <div class="col-xs-6 xs-pl0 xs-pb0"><span class="btn btnFaceBook flexRow xs-textleft" style="background-color: blue; color: white;"><img src="./Anasayfa - CEPTE ŞOK_files/facebook.svg" alt="">
+                                        <div class="col-xs-6 xs-pl0 xs-pb0"><span class="btn btnFaceBook flexRow xs-textleft" style="background-color: blue; color: white;"><img src="./resimler/facebook.svg" alt="">
                                             Facebook ile  giriş yap.
                                             </span>
                                         </div>
@@ -2358,7 +2358,7 @@ Vue.component('dortlu',{
                                                 </div>
                                                 <div class="modal-body passwordrecovery-body-complete">
                                                     <div class="modal-inner">
-                                                        <img src="./Anasayfa - CEPTE ŞOK_files/member-passwordreset-complete.svg" class="passwordrecovery-complete-image"> 
+                                                        <img src="./resimler/member-passwordreset-complete.svg" class="passwordrecovery-complete-image"> 
                                                         <h3 class="passwordrecovery-complete-title">Hesabınız aktif edilmiştir.</h3>
                                                         <button class="btn green wide modal-closetrigger">Kapat</button>
                                                     </div>
@@ -2368,7 +2368,7 @@ Vue.component('dortlu',{
                                     </div>
                                 </div>
                             </div>
-                            <div class="login-left"><a href="https://www.ceptesok.com/hazir-listeler"><img src="./Anasayfa - CEPTE ŞOK_files/login-banner.jpg" class="login-banner"></a></div>
+                            <div class="login-left"><a href="https://www.ceptesok.com/hazir-listeler"><img src="./resimler/login-banner.jpg" class="login-banner"></a></div>
                         </div>
                     </div>
                 </div>
@@ -3825,7 +3825,7 @@ Vue.component('dortlu',{
                 <h3 class="text-title">Temizlik</h3>
                 <p class="text-subtitle">176 Ürün</p>
             </div>
-            <img src="./Anasayfa - CEPTE ŞOK_files/264a36a8962ec9dc0f2bcb828997a1b7.jpg" class="item-image imagefit-img abs">
+            <img src="./resimler/264a36a8962ec9dc0f2bcb828997a1b7.jpg" class="item-image imagefit-img abs">
         </a>
     </div>
     <div class="grid-col x3 l-x6 group-desktop">
@@ -3834,15 +3834,15 @@ Vue.component('dortlu',{
                 <h3 class="text-title">Kahvaltı</h3>
                 <p class="text-subtitle">228 Ürün</p>
             </div>
-            <img src="./Anasayfa - CEPTE ŞOK_files/75d1bf06c5e664dbd4867fe92dc36fce.jpg" class="item-image imagefit-img abs">
+            <img src="./resimler/75d1bf06c5e664dbd4867fe92dc36fce.jpg" class="item-image imagefit-img abs">
         </a>
         <a href="https://www.ceptesok.com/misafir_geliyor" class="highlight-item imagefit">
             <div class="item-text">
                 <h3 class="text-title">Misafir Geliyor</h3>
                 <p class="text-subtitle">144 Ürün</p>
             </div>
-            <img src="./Anasayfa - CEPTE ŞOK_files/08bb41e4641e7d8b3fbb6b0c72f8be07.jpg" class="item-image imagefit-img abs">
-        </a>
+            <img src="./resimler/08bb41e4641e7d8b3fbb6b0c72f8be07.jpg" class="item-image imagefit-img abs">
+        </a>  
     </div>
     <div class="grid-col x3 l-x6 group-desktop">
         <a href="https://www.ceptesok.com/kadinlara_ozel" class="highlight-item imagefit">
@@ -3850,14 +3850,14 @@ Vue.component('dortlu',{
                 <h3 class="text-title">Kadınlara Özel</h3>
                 <p class="text-subtitle">188 Ürün</p>
             </div>
-            <img src="./Anasayfa - CEPTE ŞOK_files/b1a09b878898cff3bc0d42f61ad98bd2.jpg" class="item-image imagefit-img abs">
+            <img src="./resimler/b1a09b878898cff3bc0d42f61ad98bd2.jpg" class="item-image imagefit-img abs">
         </a>
         <a href="https://www.ceptesok.com/pasta-urunleri" class="highlight-item imagefit">
             <div class="item-text">
                 <h3 class="text-title">Pasta</h3>
                 <p class="text-subtitle">11 Ürün</p>
             </div>
-            <img src="./Anasayfa - CEPTE ŞOK_files/dd392d560f5107011297ab31ae7d8233.jpg" class="item-image imagefit-img abs">
+            <img src="./resimler/dd392d560f5107011297ab31ae7d8233.jpg" class="item-image imagefit-img abs">
         </a>
     </div>
     <div data-initafter="640" class="grid-col x12 group-mobile sliderelement loading loadinit slider-inited">
@@ -3866,35 +3866,35 @@ Vue.component('dortlu',{
                 <h3 class="text-title">Temizlik</h3>
                 <p class="text-subtitle">176 Ürün</p>
             </div>
-            <img src="./Anasayfa - CEPTE ŞOK_files/264a36a8962ec9dc0f2bcb828997a1b7.jpg" class="item-image imagefit-img abs">
+            <img src="./resimler/264a36a8962ec9dc0f2bcb828997a1b7.jpg" class="item-image imagefit-img abs">
         </a>
         <a href="https://www.ceptesok.com/kahvalti-urunleri" class="highlight-item big imagefit">
             <div class="item-text">
                 <h3 class="text-title">Kahvaltı</h3>
                 <p class="text-subtitle">228 Ürün</p>
             </div>
-            <img src="./Anasayfa - CEPTE ŞOK_files/75d1bf06c5e664dbd4867fe92dc36fce.jpg" class="item-image imagefit-img abs">
+            <img src="./resimler/75d1bf06c5e664dbd4867fe92dc36fce.jpg" class="item-image imagefit-img abs">
         </a>
         <a href="https://www.ceptesok.com/misafir_geliyor" class="highlight-item big imagefit">
             <div class="item-text">
                 <h3 class="text-title">Misafir Geliyor</h3>
                 <p class="text-subtitle">144 Ürün</p>
             </div>
-            <img src="./Anasayfa - CEPTE ŞOK_files/08bb41e4641e7d8b3fbb6b0c72f8be07.jpg" class="item-image imagefit-img abs">
+            <img src="./resimler/08bb41e4641e7d8b3fbb6b0c72f8be07.jpg" class="item-image imagefit-img abs">
         </a>
         <a href="https://www.ceptesok.com/kadinlara_ozel" class="highlight-item big imagefit">
             <div class="item-text">
                 <h3 class="text-title">Kadınlara Özel</h3>
                 <p class="text-subtitle">188 Ürün</p>
             </div>
-            <img src="./Anasayfa - CEPTE ŞOK_files/b1a09b878898cff3bc0d42f61ad98bd2.jpg" class="item-image imagefit-img abs">
+            <img src="./resimler/b1a09b878898cff3bc0d42f61ad98bd2.jpg" class="item-image imagefit-img abs">
         </a>
         <a href="https://www.ceptesok.com/pasta-urunleri" class="highlight-item big imagefit">
             <div class="item-text">
                 <h3 class="text-title">Pasta</h3>
                 <p class="text-subtitle">11 Ürün</p>
             </div>
-            <img src="./Anasayfa - CEPTE ŞOK_files/dd392d560f5107011297ab31ae7d8233.jpg" class="item-image imagefit-img abs">
+            <img src="./resimler/dd392d560f5107011297ab31ae7d8233.jpg" class="item-image imagefit-img abs">
         </a>
     </div>
 </div>
