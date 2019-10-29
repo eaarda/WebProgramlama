@@ -3817,6 +3817,7 @@ Vue.component('dortlu',{
  var vm = new Vue({
     el: '#headerw_menu'
  });
+ 
  Vue.component('alt',{
     template : `<div class="grid-row">
     <div class="grid-col x6 l-x12 left group-desktop">
