@@ -3817,7 +3817,6 @@ Vue.component('dortlu',{
  var vm = new Vue({
     el: '#headerw_menu'
  });
- 
  Vue.component('alt',{
     template : `<div class="grid-row">
     <div class="grid-col x6 l-x12 left group-desktop">
@@ -3992,18 +3991,6 @@ Vue.component('dortlu',{
             </div>
          </div>
          </footer>
-         <style>
-        .yukarikaydir {
-            display:none;
-            background-color:#CCFF00;
-            padding:10px;
-            position:fixed;
-            bottom:10px;
-            right:10px;
-            text-decoration:none;
-            color:#000;
-        }
-        </style>
     `,
     data: function() {
         return {
