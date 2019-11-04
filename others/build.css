@@ -7429,5 +7429,15 @@ footer .brand-logo{
     header #searcharea{
         display:none
     }
+    .yukarikaydir {
+        display:none;
+        background-color:#CCFF00;
+        padding:10px;
+        position:fixed;
+        bottom:10px;
+        right:10px;
+        text-decoration:none;
+        color:#000;
+    }
     
 }
