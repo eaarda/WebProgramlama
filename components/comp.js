@@ -3980,7 +3980,7 @@ Vue.component('dortlu',{
                </address>
             </div>
          </div>
-         <a href="#" v-on:click="yukaricik" class="yukarikaydir">Yukarı kaydır</a>
+         
          <div class="footer-bottom">
             <div class="wrapper">
                <div class="bottom-copyright">© 2017 ceptesok.com Tüm Hakları Saklıdır.</div>
