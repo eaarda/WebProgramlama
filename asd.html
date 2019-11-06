@@ -1,0 +1,43 @@
+<html>
+    <head>
+        
+      <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+      <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Hello App!</h1>
+            <p>
+              <router-link to="/foo">Go to Foo</router-link>
+              <router-link to="/bar">Go to Bar</router-link>
+            </p>
+            <router-view></router-view>
+          </div>
+        </body>
+        <script>
+      const Foo = { 
+  template: `
+<div>
+<h2>Foo</h2>
+<p>
+This is the template for foo.
+</p>
+</div>
+` 
+};
+const Bar = { template: '<div>bar</div>' };
+const routes = [
+  { path: '/foo', component: Foo },
+  { path: '/bar', component: Bar }
+]
+
+const router = new VueRouter({
+  routes // short for `routes: routes`
+});
+
+const app = new Vue({
+  el:'#app',
+  router
+});
+        </script>
+</html>

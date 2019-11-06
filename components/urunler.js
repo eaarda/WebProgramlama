@@ -1,54 +1,4 @@
-Vue.component('dortlu',{
-    template : `
-    <div class="wrapper">
-					<ul class="sections-list grid-row">
-						<li class="grid-col x3 xl-x6"  v-for="item in items">
-							<div class="list-item imagefit al-bottom al-right">
-								<div class="item-text">
-									<h3 class="item-title">{{item.baslik}}</h3>
-									<a :href="item.link" class="item-link btn white">Fırsatları Gör</a>
-								</div>
-								<img :src="item.resim" class="item-image imagefit-img abs">
-							</div>
-						</li>
-						
-					</ul>
-				</div>
-    `,
-    data: function() {
-       return {
-          items:[{
-              baslik:"Haftanın Fırsatları",
-              link:"https://www.ceptesok.com/kampanyalar",
-              resim:"./resimler/5244715d14cde646a6083ef107f65e5b.jpg"
-            },
-            {
-              baslik:"Stoklarla Sınırlı",
-              link:"https://www.ceptesok.com/stoklarla-sinirli",
-              resim:"./resimler/e6bbd20780d79e9bcf169b96ac759868.jpg"
-            },
-            {
-                baslik:"Şok'a Özel Fırsatlar",
-                link:"https://www.ceptesok.com/sok-a-ozel-firsatlar",
-                resim:"./resimler/a4002e58c5e778693dabc2dc7d4841d9.jpg"
-            },
-            {
-                baslik:"Çok Satanlar",
-                link:"https://www.ceptesok.com/cok-satanlar",
-                resim:"./resimler/9d4957e0cbb735a0292af5fcc2ecaba5.jpg"
-              }
-        ]
-       }
-    },
-    methods:{
-     
-    }
- });
- var vm = new Vue({
-    el: '#component_dortlu'
- });
-
- Vue.component('headerwmenu',{
+Vue.component('headerwmenu',{
     template : `
     <header>
         <div class="header-inner">
@@ -3773,11 +3723,11 @@ Vue.component('dortlu',{
     methods:{
      getCategories:function(parent){
          var result=[];
-         console.log("Burdayız")
+        // console.log("Burdayız")
          for(var i = 0 ; i< this.data.payload.categories.length;i++)
          {
              for(var j = 0; j<this.data.payload.categories[i].children.length;j++){
-                 console.log(this.data.payload.categories[i].children[j].name)
+                 //console.log(this.data.payload.categories[i].children[j].name)
                     if(this.data.payload.categories[i].children[j].parentid==parent){
                     result.push(this.data.payload.categories[i].children[j]);
                 }
@@ -3793,7 +3743,7 @@ Vue.component('dortlu',{
                 for(var k = 0; k<this.data.payload.categories[i].children[j].children.length;k++){
                         if(this.data.payload.categories[i].children[j].children[k].parentid==parentidd){
                           result.push(this.data.payload.categories[i].children[j].children[k]); 
-                          console.log("buu",this.data.payload.categories[i].children[j].children[k])
+                        //  console.log("buu",this.data.payload.categories[i].children[j].children[k])
                         }
                 }
             }
@@ -3807,7 +3757,7 @@ Vue.component('dortlu',{
         .then(data => {
          this.data = data;
          setTimeout(() => (this.gor = true), 3000);
-         console.log("this.data",JSON.stringify(data.payload.categories[0].children[0].name))
+        // console.log("this.data",JSON.stringify(data.payload.categories[0].children[0].name))
          this.gor=true;
           });
         
@@ -3817,103 +3767,7 @@ Vue.component('dortlu',{
  var vm = new Vue({
     el: '#headerw_menu'
  });
- Vue.component('alt',{
-    template : `
-    <div class="grid-row">
-    <div class="grid-col x6 l-x12 left group-desktop">
-        <a href="https://www.ceptesok.com/tertemiz-evim-listesi" class="highlight-item big imagefit">
-            <div class="item-text">
-                <h3 class="text-title">Temizlik</h3>
-                <p class="text-subtitle">176 Ürün</p>
-            </div>
-            <img src="./resimler/264a36a8962ec9dc0f2bcb828997a1b7.jpg" class="item-image imagefit-img abs">
-        </a>
-    </div>
-    <div class="grid-col x3 l-x6 group-desktop">
-        <a href="https://www.ceptesok.com/kahvalti-urunleri" class="highlight-item imagefit">
-            <div class="item-text">
-                <h3 class="text-title">Kahvaltı</h3>
-                <p class="text-subtitle">228 Ürün</p>
-            </div>
-            <img src="./resimler/75d1bf06c5e664dbd4867fe92dc36fce.jpg" class="item-image imagefit-img abs">
-        </a>
-        <a href="https://www.ceptesok.com/misafir_geliyor" class="highlight-item imagefit">
-            <div class="item-text">
-                <h3 class="text-title">Misafir Geliyor</h3>
-                <p class="text-subtitle">144 Ürün</p>
-            </div>
-            <img src="./resimler/08bb41e4641e7d8b3fbb6b0c72f8be07.jpg" class="item-image imagefit-img abs">
-        </a>  
-    </div>
-    <div class="grid-col x3 l-x6 group-desktop">
-        <a href="https://www.ceptesok.com/kadinlara_ozel" class="highlight-item imagefit">
-            <div class="item-text">
-                <h3 class="text-title">Kadınlara Özel</h3>
-                <p class="text-subtitle">188 Ürün</p>
-            </div>
-            <img src="./resimler/b1a09b878898cff3bc0d42f61ad98bd2.jpg" class="item-image imagefit-img abs">
-        </a>
-        <a href="https://www.ceptesok.com/pasta-urunleri" class="highlight-item imagefit">
-            <div class="item-text">
-                <h3 class="text-title">Pasta</h3>
-                <p class="text-subtitle">11 Ürün</p>
-            </div>
-            <img src="./resimler/dd392d560f5107011297ab31ae7d8233.jpg" class="item-image imagefit-img abs">
-        </a>
-    </div>
-    <div data-initafter="640" class="grid-col x12 group-mobile sliderelement loading loadinit slider-inited">
-        <a href="https://www.ceptesok.com/tertemiz-evim-listesi" class="highlight-item big imagefit">
-            <div class="item-text">
-                <h3 class="text-title">Temizlik</h3>
-                <p class="text-subtitle">176 Ürün</p>
-            </div>
-            <img src="./resimler/264a36a8962ec9dc0f2bcb828997a1b7.jpg" class="item-image imagefit-img abs">
-        </a>
-        <a href="https://www.ceptesok.com/kahvalti-urunleri" class="highlight-item big imagefit">
-            <div class="item-text">
-                <h3 class="text-title">Kahvaltı</h3>
-                <p class="text-subtitle">228 Ürün</p>
-            </div>
-            <img src="./resimler/75d1bf06c5e664dbd4867fe92dc36fce.jpg" class="item-image imagefit-img abs">
-        </a>
-        <a href="https://www.ceptesok.com/misafir_geliyor" class="highlight-item big imagefit">
-            <div class="item-text">
-                <h3 class="text-title">Misafir Geliyor</h3>
-                <p class="text-subtitle">144 Ürün</p>
-            </div>
-            <img src="./resimler/08bb41e4641e7d8b3fbb6b0c72f8be07.jpg" class="item-image imagefit-img abs">
-        </a>
-        <a href="https://www.ceptesok.com/kadinlara_ozel" class="highlight-item big imagefit">
-            <div class="item-text">
-                <h3 class="text-title">Kadınlara Özel</h3>
-                <p class="text-subtitle">188 Ürün</p>
-            </div>
-            <img src="./resimler/b1a09b878898cff3bc0d42f61ad98bd2.jpg" class="item-image imagefit-img abs">
-        </a>
-        <a href="https://www.ceptesok.com/pasta-urunleri" class="highlight-item big imagefit">
-            <div class="item-text">
-                <h3 class="text-title">Pasta</h3>
-                <p class="text-subtitle">11 Ürün</p>
-            </div>
-            <img src="./resimler/dd392d560f5107011297ab31ae7d8233.jpg" class="item-image imagefit-img abs">
-        </a>
-    </div>
-</div>
-    `,
-    data: function() {
-       return {
-        data:""
-       }
-    },
-    methods:{
-     
-    },
-
-  } );
- var vm = new Vue({
-    el: '#component_alt'
- });
- Vue.component('sitealtkisim',{
+Vue.component('sitealtkisim',{
     template : `
     <footer>
     <div class="footer-top">
@@ -4022,3 +3876,82 @@ Vue.component('dortlu',{
  var vm = new Vue({
     el: '#alt_kisim'
  });
+
+ Vue.component('urunler',{
+    template : `
+    <div v-if="gor">
+    <li class="list-result" v-for="product in data.payload.products">
+    <div class="productbox">
+    <div class="product-cartcontrols">
+        <button class="cartcontrols-close"><i class="icon-close"></i></button>
+        <div class="cartcontrols-price">
+            <div class="pricebox">
+                <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">9</span><span class="pricebox-decimal">95</span></div>
+            </div>
+        </div>
+        <div class="product-description cartcontrols-description">
+            <h3 class="product-title"><a href="/soslu-biftek-sefin-spesiyali-150-gr">salla</a></h3>
+            <p class="product-subtitle">1 adet</p>
+        </div>
+        <div class="cartcontrols-controls">
+            <!---->
+            <div class="controls-amount numberbox white numberbox-min">
+                <button class="numberbox-button number-increase"></button>
+                <button class="numberbox-button number-decrease"></button>
+                <input type="text" id="product_control_box_50" max="10" min="1" data-after="adet" data-step="1">
+            </div>
+            <button data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger">Market Seç
+            </button>
+            <!---->
+        </div>
+    </div>
+    <div class="product-content">
+        <!---->
+        <div class="product-image-wrap" v-for="pr in product.files">
+            <a :href="'https://www.ceptesok.com/'+ product.link_name" class="product-image imagefit fit"><img class="imagefit-img abs" :src="'https://cdnd.ceptesok.com/product/420x420/'+pr.document_href"></a>
+        </div>
+        <div class="product-price">
+            <div class="pricebox">
+                <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">{{product.serial_market_price}}</span></div>
+            </div>
+        </div>
+        <div class="product-description">
+            <h3 class="product-title"><a href="/soslu-biftek-sefin-spesiyali-150-gr">{{product.warranty_description}}</a></h3>
+            <p class="product-subtitle">1 {{gettype(product.unit)}}</p>
+            <!---->
+            <!---->
+        </div>
+        <button id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Market Seç
+        </button>
+        <!----><script>
+        gettype(1)</script>
+    </div>
+</div>
+</li>
+</div>
+    `,
+    data: function() {
+        return {
+         data:"",
+         gor:false
+        }
+     },
+     methods:{
+        gettype:function(miktar){
+           return miktar == 1 ? "Adet" : "Kg"
+        }
+    },
+    created() {
+        fetch('https://www.ceptesok.com/api/v1/products?limit=52&order=rank&page=1&categoryId=1242')
+        .then(response => response.json())
+        .then(data => {
+            this.data=data;
+            console.log(data.payload.products.length)
+            this.gor=true;
+          });
+        }
+ });
+
+ var vm = new Vue({
+    el: '#section_products'
+});
