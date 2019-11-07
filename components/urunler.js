@@ -4260,6 +4260,46 @@ Vue.component('sitealtkisim',{
           });
         }
  });
+ var adana = Vue.component('markalar',{
+     template:`
+     <div v-if="gor">
+     <li class="list-item" v-for="marka in data">
+        <div class="checkwrap">
+            <input type="checkbox" id="brand_filter_0" value="0">
+            <label for="brand_filter_0"><span></span>{{marka}}</label>
+        </div>
+    </li>
+    </div>
+     `,
+     data: function() {
+        return {
+         data:[],
+         gor:false
+        }
+     },
+     methods:{
+         
+     },
+     created() {
+        fetch('https://www.ceptesok.com/api/v1/products?limit=52&order=opa&page=1&categoryId=1242')
+        .then(response => response.json())
+        .then(data => {
+            var result= [];
+            data.payload.products.forEach(element => {
+                console.log(element.brand.name)
+               if(result.includes(element.brand.name))
+               {
+
+               }else{
+                   result.push(element.brand.name)
+               }
+            });
+            this.data=result;
+            this.gor=true;
+          });
+         
+        }
+ })
 var pageDetails = {id:""}
   const routes = [
     { path: '/', component: urunler },
