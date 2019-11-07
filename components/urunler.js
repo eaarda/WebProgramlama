@@ -4010,8 +4010,8 @@ Vue.component('sitealtkisim',{
            return miktar == 1 ? "Adet" : "Kg"
         },
         goo:function(){
-            console.log("asda")
-            this.$router.push('/assa/asas')
+            console.log(this.window)
+            this.$router.redirect('/urun.html')
         }
     },
     created() {
@@ -4300,12 +4300,12 @@ Vue.component('sitealtkisim',{
          
         }
  })
-var pageDetails = {id:""}
   const routes = [
     { path: '/', component: urunler },
     { path: '/order/opa/', name:'elif', component: endusukfiyat},
+
     { path: '/order/ocd/', component: enyeniler },
-    { path: '/urunler/', redirect: { name: 'elif' }}
+    { path: '/assa/asas', redirect: { name: 'elif' }}
   ]
   
   const router = new VueRouter({

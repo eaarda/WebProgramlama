@@ -38,11 +38,11 @@
      <div id="focus" class="section listing-container grid-container nogap-vertical"><div class="grid-row"><div class="section listing-toprow"><div class="grid-col toprow-col toprow-mobile"><p>229 ürün bulundu</p> <button class="btn heavy small mobile-filterbtn listing-mobiletrigger-filters">Filtre</button> <button class="btn heavy small mobile-filterbtn listing-mobiletrigger-order">Sırala</button></div> <div class="grid-col toprow-title"><div class="toprow-content">
         229 ürün bulundu
     </div></div> <div class="grid-col toprow-col toprow-order"><div class="toprow-content"><span class="order-title">Sıralama:</span> <nav class="order-opts">
-        <button onclick="focusx()" class="order-opt active">
+        <button onclick="focusx(this.id)" id="coksatan"  onclick="changeClassesx(this.id)" class="order-opt active">
             <router-link to="/"> Çok satanlar</router-link>
-            </button><button onclick="focusx()" class="order-opt">
+            </button><button onclick="focusx(this.id)" id="endusuk"  onclick="changeClassesx(this.id)" class="order-opt">
                 <router-link to="/order/opa/">En düşük fiyat</router-link>
-            </button><button onclick="focusx()" class="order-opt">
+            </button><button onclick="focusx(this.id)" id="enyeni"  onclick="changeClassesx(this.id)" class="order-opt">
                     <router-link to="/order/ocd/">En yeniler</router-link>
             </button>
             </nav></div></div></div></div> <div class="grid-row">
@@ -95,8 +95,10 @@
                         </div></main></div>
                     <sitealtkisim></sitealtkisim>  
                     <script>  
-                    function focusx(){
+                    function focusx(clickedid){
                         document.getElementById("focus").scrollIntoView(true);
+                        console.log(clickedid)
+                        document.getElementById(clickedid).className="order-opt active"
                     }
                 </script>
             <script type="text/javascript" src="./others/build.js"></script>
