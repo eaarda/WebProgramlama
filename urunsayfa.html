@@ -33,17 +33,16 @@
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
      </head><body>
-     <div id="headerw_menu">
+         <div id="app">
             <headerwmenu></headerwmenu>
-         </div>
      <div class="section listing-container grid-container nogap-vertical"><div class="grid-row"><div class="section listing-toprow"><div class="grid-col toprow-col toprow-mobile"><p>229 ürün bulundu</p> <button class="btn heavy small mobile-filterbtn listing-mobiletrigger-filters">Filtre</button> <button class="btn heavy small mobile-filterbtn listing-mobiletrigger-order">Sırala</button></div> <div class="grid-col toprow-title"><div class="toprow-content">
         229 ürün bulundu
     </div></div> <div class="grid-col toprow-col toprow-order"><div class="toprow-content"><span class="order-title">Sıralama:</span> <nav class="order-opts"><button class="order-opt active">
-                Çok satanlar
+            <router-link to="/"> Çok satanlar</router-link>
             </button><button class="order-opt">
-                En düşük fiyat
+                <router-link to="/order/opa/">En düşük fiyat</router-link>
             </button><button class="order-opt">
-                En yeniler
+                    <router-link to="/order/ocd/">En yeniler</router-link>
             </button></nav></div></div></div></div> <div class="grid-row">
                    <!--sol baslangiç -->
                    <aside class="grid-col section listing-filters">
@@ -429,15 +428,15 @@
                         <!---->
                         <div class="results-list-wrap">
                             <ul class="results-list">
-                                <div id="section_products">
-                                    <urunler></urunler>
-                                </div>
+                                    <router-view></router-view>
+                            </div>
                             </ul>
                         </div></main></div>
-            <div id="alt_kisim">
+            
                     <sitealtkisim></sitealtkisim>
-                 </div>
+               
             <script type="text/javascript" src="./others/build.js"></script>
             <script type="text/javascript" src="./others/main.js"></script>
             <script type ="text/javascript" src ="./components/urunler.js"></script>
+        </div>
         </body>
