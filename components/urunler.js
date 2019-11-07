@@ -3764,9 +3764,7 @@ Vue.component('headerwmenu',{
           
         }
       });
- var vm = new Vue({
-    el: '#headerw_menu'
- });
+
 Vue.component('sitealtkisim',{
     template : `
     <footer>
@@ -3873,11 +3871,9 @@ Vue.component('sitealtkisim',{
      }
      }
  })
- var vm = new Vue({
-    el: '#alt_kisim'
- });
 
- Vue.component('urunler',{
+
+ var urunler = Vue.component('urunler',{
     template : `
     <div v-if="gor">
     <li class="list-result" v-for="product in data.payload.products">
@@ -3923,8 +3919,7 @@ Vue.component('sitealtkisim',{
         </div>
         <button id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Market Seç
         </button>
-        <!----><script>
-        gettype(1)</script>
+        <!---->
     </div>
 </div>
 </li>
@@ -3952,6 +3947,372 @@ Vue.component('sitealtkisim',{
         }
  });
 
- var vm = new Vue({
-    el: '#section_products'
-});
+ var endusukfiyat =Vue.component('endusukfiyat',{
+    template : `
+    <div v-if="gor">
+    <li class="list-result" v-for="product in data.payload.products">
+    <div class="productbox" :productid=product.serial_productid>
+    <div class="product-cartcontrols">
+        <button class="cartcontrols-close"><i class="icon-close"></i></button>
+        <div class="cartcontrols-price">
+            <div class="pricebox">
+                <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">9</span><span class="pricebox-decimal">95</span></div>
+            </div>
+        </div>
+        <div class="product-description cartcontrols-description">
+            <h3 class="product-title"><a href="/soslu-biftek-sefin-spesiyali-150-gr">salla</a></h3>
+            <p class="product-subtitle">1 adet</p>
+        </div>
+        <div class="cartcontrols-controls">
+            <!---->
+            <div class="controls-amount numberbox white numberbox-min">
+                <button class="numberbox-button number-increase"></button>
+                <button class="numberbox-button number-decrease"></button>
+                <input type="text" id="product_control_box_50" max="10" min="1" data-after="adet" data-step="1">
+            </div>
+            <button data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger" >Market Seç
+            </button>
+            <!---->
+        </div>
+    </div>
+    <div class="product-content">
+        <!---->
+        <div class="product-image-wrap" v-for="pr in product.files">
+            <a :href="'https://www.ceptesok.com/'+ product.link_name" class="product-image imagefit fit"><img class="imagefit-img abs" :src="'https://cdnd.ceptesok.com/product/420x420/'+pr.document_href"></a>
+        </div>
+        <div class="product-price">
+            <div class="pricebox">
+                <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">{{product.serial_market_price}}</span></div>
+            </div>
+        </div>
+        <div class="product-description">
+            <h3 class="product-title"><a href="">{{product.warranty_description}}</a></h3>
+            <p class="product-subtitle">1 {{gettype(product.unit)}}</p>
+            <!---->
+            <!---->
+        </div>
+        <button v-on:click="goo" id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Market Seççç
+        </button>
+        <!---->
+    </div>
+</div>
+</li>
+</div>
+    `,
+    data: function() {
+        return {
+         data:"",
+         gor:false
+        }
+     },
+     methods:{
+        gettype:function(miktar){
+           return miktar == 1 ? "Adet" : "Kg"
+        },
+        goo:function(){
+            console.log("asda")
+            this.$router.push('/assa/asas')
+        }
+    },
+    created() {
+        fetch('https://www.ceptesok.com/api/v1/products?limit=52&order=opa&page=1&categoryId=1242')
+        .then(response => response.json())
+        .then(data => {
+            this.data=data;
+            console.log(data.payload.products.length)
+            this.gor=true;
+          });
+        }
+ });
+ var enyeniler =Vue.component('enyeniler',{
+    template : `
+    <div v-if="gor">
+    <li class="list-result" v-for="product in data.payload.products">
+    <div class="productbox">
+    <div class="product-cartcontrols">
+        <button class="cartcontrols-close"><i class="icon-close"></i></button>
+        <div class="cartcontrols-price">
+            <div class="pricebox">
+                <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">9</span><span class="pricebox-decimal">95</span></div>
+            </div>
+        </div>
+        <div class="product-description cartcontrols-description">
+            <h3 class="product-title"><a href="/soslu-biftek-sefin-spesiyali-150-gr">salla</a></h3>
+            <p class="product-subtitle">1 adet</p>
+        </div>
+        <div class="cartcontrols-controls">
+            <!---->
+            <div class="controls-amount numberbox white numberbox-min">
+                <button class="numberbox-button number-increase"></button>
+                <button class="numberbox-button number-decrease"></button>
+                <input type="text" id="product_control_box_50" max="10" min="1" data-after="adet" data-step="1">
+            </div>
+            <button data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger">Market Seç
+            </button>
+            <!---->
+        </div>
+    </div>
+    <div class="product-content">
+        <!---->
+        <div class="product-image-wrap" v-for="pr in product.files">
+            <a :href="'https://www.ceptesok.com/'+ product.link_name" class="product-image imagefit fit"><img class="imagefit-img abs" :src="'https://cdnd.ceptesok.com/product/420x420/'+pr.document_href"></a>
+        </div>
+        <div class="product-price">
+            <div class="pricebox">
+                <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">{{product.serial_market_price}}</span></div>
+            </div>
+        </div>
+        <div class="product-description">
+            <h3 class="product-title"><a href="/soslu-biftek-sefin-spesiyali-150-gr">{{product.warranty_description}}</a></h3>
+            <p class="product-subtitle">1 {{gettype(product.unit)}}</p>
+            <!---->
+            <!---->
+        </div>
+        <button id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Market Seç
+        </button>
+        <!---->
+    </div>
+</div>
+</li>
+</div>
+    `,
+    data: function() {
+        return {
+         data:"",
+         url:this.$route.params.id,
+         gor:false
+        }
+     },
+     methods:{
+        gettype:function(miktar){
+           return miktar == 1 ? "Adet" : "Kg"
+        }
+    },
+    created() {
+        fetch('https://www.ceptesok.com/api/v1/products?limit=52&order=opa&page=1&categoryId=1242')
+        .then(response => response.json())
+        .then(data => {
+            this.data=data;
+            console.log(data.payload.products.length)
+            this.gor=true;
+          });
+        }
+ });
+ var urun =Vue.component('urun',{
+    template : `
+    <div v-if="gor">
+    <li class="list-result" v-for="product in data.payload.products">
+    <div class="productbox">
+    <div class="product-cartcontrols">
+        <button class="cartcontrols-close"><i class="icon-close"></i></button>
+        <div class="cartcontrols-price">
+            <div class="pricebox">
+                <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">9</span><span class="pricebox-decimal">95</span></div>
+            </div>
+        </div>
+        <div class="product-description cartcontrols-description">
+            <h3 class="product-title"><a href="/soslu-biftek-sefin-spesiyali-150-gr">salla</a></h3>
+            <p class="product-subtitle">1 adet</p>
+        </div>
+        <div class="cartcontrols-controls">
+            <!---->
+            <div class="controls-amount numberbox white numberbox-min">
+                <button class="numberbox-button number-increase"></button>
+                <button class="numberbox-button number-decrease"></button>
+                <input type="text" id="product_control_box_50" max="10" min="1" data-after="adet" data-step="1">
+            </div>
+            <button data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger">Market Seç
+            </button>
+            <!---->
+        </div>
+    </div>
+    <div class="product-content">
+        <!---->
+        <div class="product-image-wrap" v-for="pr in product.files">
+            <a :href="'https://www.ceptesok.com/'+ product.link_name" class="product-image imagefit fit"><img class="imagefit-img abs" :src="'https://cdnd.ceptesok.com/product/420x420/'+pr.document_href"></a>
+        </div>
+        <div class="product-price">
+            <div class="pricebox">
+                <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">{{product.serial_market_price}}</span></div>
+            </div>
+        </div>
+        <div class="product-description">
+            <h3 class="product-title"><a href="/soslu-biftek-sefin-spesiyali-150-gr">{{product.warranty_description}}</a></h3>
+            <p class="product-subtitle">1 {{gettype(product.unit)}}</p>
+            <!---->
+            <!---->
+        </div>
+        <button id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Market Seç
+        </button>
+        <!---->
+    </div>
+</div>
+</li>
+</div><div>
+<nav class="section breadcrumbs">
+    <div class="wrapper breadcrumbs-wrap">
+        <div class="breadcrumbs-container">
+            <ul class="breadcrumbs-list">
+                <li><a href="https://www.ceptesok.com">Ana Sayfa</a></li>
+                <li><span>Kırmızı Et</span></li>
+                <li><a href="kirmizi-et/dana-paket">Dana Paket</a></li>
+                <li><span>Aytaç Soslu Biftek Şefin Spesiyali 150 Gr</span></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main class="section product-detail grid-container">
+    <div class="wrapper narrow">
+        <div class="grid-row detail-wrap">
+            <div class="grid-col section detail-gallery">
+                <ul class="gallery-imagelist">
+                    <li data-src="https://cdnd.ceptesok.com/product/420x420/58b4d_soslu-biftek-sefin-spesiyali-150-gr.jpg" data-src-big="https://cdnd.ceptesok.com/product/1000x1000/58b4d_soslu-biftek-sefin-spesiyali-150-gr.jpg"></li>
+                </ul>
+                <div class="gallery-slider-wrap">
+                    <div class="gallery-slider owl-carousel owl-loaded owl-drag">
+                        <div class="owl-stage-outer">
+                            <div class="owl-stage" style="transform: translate3d(-882px, 0px, 0px); transition: all 0s ease 0s; width: 2205px;">
+                                <div class="owl-item cloned" style="width: 441px;"><img class="slider-image" data-nth="0" src="https://cdnd.ceptesok.com/product/420x420/58b4d_soslu-biftek-sefin-spesiyali-150-gr.jpg" data-img-big="https://cdnd.ceptesok.com/product/1000x1000/58b4d_soslu-biftek-sefin-spesiyali-150-gr.jpg"></div>
+                                <div class="owl-item cloned" style="width: 441px;"><img class="slider-image" data-nth="0" src="https://cdnd.ceptesok.com/product/420x420/58b4d_soslu-biftek-sefin-spesiyali-150-gr.jpg" data-img-big="https://cdnd.ceptesok.com/product/1000x1000/58b4d_soslu-biftek-sefin-spesiyali-150-gr.jpg"></div>
+                                <div class="owl-item active" style="width: 441px;"><img class="slider-image" data-nth="0" src="https://cdnd.ceptesok.com/product/420x420/58b4d_soslu-biftek-sefin-spesiyali-150-gr.jpg" data-img-big="https://cdnd.ceptesok.com/product/1000x1000/58b4d_soslu-biftek-sefin-spesiyali-150-gr.jpg"></div>
+                                <div class="owl-item cloned" style="width: 441px;"><img class="slider-image" data-nth="0" src="https://cdnd.ceptesok.com/product/420x420/58b4d_soslu-biftek-sefin-spesiyali-150-gr.jpg" data-img-big="https://cdnd.ceptesok.com/product/1000x1000/58b4d_soslu-biftek-sefin-spesiyali-150-gr.jpg"></div>
+                                <div class="owl-item cloned" style="width: 441px;"><img class="slider-image" data-nth="0" src="https://cdnd.ceptesok.com/product/420x420/58b4d_soslu-biftek-sefin-spesiyali-150-gr.jpg" data-img-big="https://cdnd.ceptesok.com/product/1000x1000/58b4d_soslu-biftek-sefin-spesiyali-150-gr.jpg"></div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="grid-col section detail-content">
+                <div class="content-meta">
+                    <div class="pricebox">
+                        <div class="pricebox-content"><span class="currency pricebox-currency"></span><span class="pricebox-main">9</span><span class="pricebox-decimal">95</span></div>
+                    </div>
+                    <div class="meta-controls">
+                        <div class="controls-share">
+                            <h3 class="share-title">Paylaş:</h3>
+                            <ul class="share-icons">
+                                <li class="icons-icon">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.ceptesok.com/soslu-biftek-sefin-spesiyali-150-gr" target="_blank" class="icon-link icon-facebook"></a>
+                                </li>
+                                <li class="icons-icon">
+                                    <a href="https://twitter.com/share?https://www.ceptesok.com/soslu-biftek-sefin-spesiyali-150-gr&amp;hashtags=ceptesok" target="_blank" class="icon-link icon-twitter"></a>
+                                </li>
+                                <li class="icons-icon">
+                                    <a href="https://plus.google.com/share?url=https://www.ceptesok.com/soslu-biftek-sefin-spesiyali-150-gr" target="_blank" class="icon-link icon-google-plus"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="controls-like"><i class="icon-heart-empty"></i> <i class="icon-heart-full active"></i></button>
+                    </div>
+                </div>
+                <div class="content-description">
+                    <h1 class="description-title">Aytaç Soslu Biftek Şefin Spesiyali 150 Gr</h1>
+                    <p class="description-subtitle">1 adet</p>
+                    <!---->
+                    <!---->
+                </div>
+                <div>
+                    <div class="content-controls">
+                        <div class="controls-quantity">
+                            <!---->
+                            <div class="quantity-amount numberbox">
+                                <button class="numberbox-button number-increase"></button>
+                                <button class="numberbox-button number-decrease"></button>
+                                <input type="text" max="10" min="1" id="amount" data-after="adet" data-step="1" disabled="disabled">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-controls">
+                        <button data-modal="modal_stores" class="controls-addtocart btn green text-big modaltrigger"><i class="icon-basket"></i> <span>Sepete Ekle</span></button>
+                        <!---->
+                        <!---->
+                        <!---->
+                    </div>
+                </div>
+                <div class="description-text"> </div>
+            </div>
+        </div>
+        <!---->
+    </div>
+</main>
+</div>
+    `,
+    data: function() {
+        return {
+         data:"",
+         url:this.$route.params.id,
+         gor:false
+        }
+     },
+     methods:{
+        gettype:function(miktar){
+           return miktar == 1 ? "Adet" : "Kg"
+        }
+    },
+    created() {
+        fetch('https://www.ceptesok.com/api/v1/products?limit=52&order=opa&page=1&categoryId=1242')
+        .then(response => response.json())
+        .then(data => {
+            this.data=data;
+            console.log(data.payload.products.length)
+            this.gor=true;
+          });
+        }
+ });
+ var adana = Vue.component('markalar',{
+     template:`
+     <div v-if="gor">
+     <li class="list-item" v-for="marka in data">
+        <div class="checkwrap">
+            <input type="checkbox" id="brand_filter_0" value="0">
+            <label for="brand_filter_0"><span></span>{{marka}}</label>
+        </div>
+    </li>
+    </div>
+     `,
+     data: function() {
+        return {
+         data:[],
+         gor:false
+        }
+     },
+     methods:{
+         
+     },
+     created() {
+        fetch('https://www.ceptesok.com/api/v1/products?limit=52&order=opa&page=1&categoryId=1242')
+        .then(response => response.json())
+        .then(data => {
+            var result= [];
+            data.payload.products.forEach(element => {
+                console.log(element.brand.name)
+               if(result.includes(element.brand.name))
+               {
+
+               }else{
+                   result.push(element.brand.name)
+               }
+            });
+            this.data=result;
+            this.gor=true;
+          });
+         
+        }
+ })
+var pageDetails = {id:""}
+  const routes = [
+    { path: '/', component: urunler },
+    { path: '/order/opa/', name:'elif', component: endusukfiyat},
+    { path: '/order/ocd/', component: enyeniler },
+    { path: '/urunler/', redirect: { name: 'elif' }}
+  ]
+  
+  const router = new VueRouter({
+    routes // short for `routes: routes`
+  });
+  
+  const app = new Vue({
+    el:'#app',
+    router
+  });
