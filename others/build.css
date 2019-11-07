@@ -246,6 +246,15 @@ a,button{
 a{
     text-decoration:none
 }
+a:hover, a:active {
+    color: #0551a0;
+    text-decoration: none;
+    outline: 0;
+    -webkit-transition: color 300ms ease-in;
+    -moz-transition: color 300ms ease-in;
+    -o-transition: color 300ms ease-in;
+    background: #ffe0008c;
+}
 button{
     overflow:visible;
     border:0;
@@ -1608,7 +1617,8 @@ h1,h2,h3,h4,h5,h6{
 .productbox{
     background-color:#fff;
     padding:.85714286rem .85714286rem .85714286rem .85714286rem;
-    position:relative
+    position:relative;
+    border: 2px solid #ffe000
 }
 .productbox .product-cartcontrols{
     display:none;

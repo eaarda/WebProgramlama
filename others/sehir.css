@@ -5186,10 +5186,10 @@ footer .brand-logo {
 }
 .section.listing-toprow .order-opt:active,
 .section.listing-toprow .order-opt:hover {
-	border-color:#ececec
+	border-color:#ececec;
 }
 .section.listing-toprow .order-opt.active {
-	border-color:#cfcfcf
+	border-color:#cfcfcf;
 }
 .section.listing-toprow .order-opt+.order-opt {
 	margin-left:.57142857rem
@@ -7422,8 +7422,9 @@ html.feature_touchevents .productbox .product-controlbutton {
 	}
 	.section.listing-toprow .order-opt.active {
 		border-color:#ececec;
-		background-color:#ececec
+		background-color:#ffe0008c;
 	}
+	
 	.section.home-slider .slide .slide-content .desktop {
 		padding-bottom:31.775%;
 		height:auto
