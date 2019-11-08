@@ -1,4 +1,4 @@
-Vue.component('headerwmenu',{
+ Vue.component('headerwmenu',{
     template : `
     <header>
         <div class="header-inner">
@@ -3763,9 +3763,8 @@ Vue.component('headerwmenu',{
         
           
         }
-      });
-
-Vue.component('sitealtkisim',{
+ });
+ Vue.component('sitealtkisim',{
     template : `
     <footer>
     <div class="footer-top">
@@ -3871,8 +3870,6 @@ Vue.component('sitealtkisim',{
      }
      }
  })
-
-
  var urunler = Vue.component('urunler',{
     template : `
     <div v-if="gor">
@@ -3917,7 +3914,7 @@ Vue.component('sitealtkisim',{
             <!---->
             <!---->
         </div>
-        <button id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Market Seç
+        <button v-on:click="goo(product.serial_productid)" id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Market Seç
         </button>
         <!---->
     </div>
@@ -3934,7 +3931,11 @@ Vue.component('sitealtkisim',{
      methods:{
         gettype:function(miktar){
            return miktar == 1 ? "Adet" : "Kg"
-        }
+        },
+        goo:function(id){
+            pageId= id;
+            console.log(pageId)
+        }  
     },
     created() {
         fetch('https://www.ceptesok.com/api/v1/products?limit=52&order=rank&page=1&categoryId=1242')
@@ -3946,12 +3947,11 @@ Vue.component('sitealtkisim',{
           });
         }
  });
-
  var endusukfiyat =Vue.component('endusukfiyat',{
     template : `
     <div v-if="gor">
     <li class="list-result" v-for="product in data.payload.products">
-    <div class="productbox" :productid=product.serial_productid>
+    <div class="productbox">
     <div class="product-cartcontrols">
         <button class="cartcontrols-close"><i class="icon-close"></i></button>
         <div class="cartcontrols-price">
@@ -3991,7 +3991,7 @@ Vue.component('sitealtkisim',{
             <!---->
             <!---->
         </div>
-        <button v-on:click="goo" id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Market Seççç
+        <button v-on:click="goo(product.serial_productid)" id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Market Seççç
         </button>
         <!---->
     </div>
@@ -4009,9 +4009,9 @@ Vue.component('sitealtkisim',{
         gettype:function(miktar){
            return miktar == 1 ? "Adet" : "Kg"
         },
-        goo:function(){
-            console.log(this.window)
-            this.$router.redirect('/urun.html')
+        goo:function(id){
+            pageId= id;
+            console.log(pageId)
         }
     },
     created() {
@@ -4024,7 +4024,7 @@ Vue.component('sitealtkisim',{
           });
         }
  });
- var enyeniler =Vue.component('enyeniler',{
+ var enyeniler = Vue.component('enyeniler',{
     template : `
     <div v-if="gor">
     <li class="list-result" v-for="product in data.payload.products">
@@ -4068,7 +4068,7 @@ Vue.component('sitealtkisim',{
             <!---->
             <!---->
         </div>
-        <button id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Market Seç
+        <button v-on:click="goo(product.serial_productid)" id="storeTriggerEvent" data-modal="modal_stores" class="product-controlbutton btn gray small modaltrigger modalStoreTriggerEvent">Market Seç
         </button>
         <!---->
     </div>
@@ -4086,6 +4086,10 @@ Vue.component('sitealtkisim',{
      methods:{
         gettype:function(miktar){
            return miktar == 1 ? "Adet" : "Kg"
+        },
+        goo:function(id){
+            pageId= id;
+            console.log(pageId)
         }
     },
     created() {
@@ -4098,7 +4102,7 @@ Vue.component('sitealtkisim',{
           });
         }
  });
- var urun =Vue.component('urun',{
+ var urun = Vue.component('urun',{
     template : `
     <div v-if="gor">
     <li class="list-result" v-for="product in data.payload.products">
@@ -4241,7 +4245,6 @@ Vue.component('sitealtkisim',{
     data: function() {
         return {
          data:"",
-         url:this.$route.params.id,
          gor:false
         }
      },
@@ -4260,7 +4263,7 @@ Vue.component('sitealtkisim',{
           });
         }
  });
- var adana = Vue.component('markalar',{
+ Vue.component('markalar',{
      template:`
      <div v-if="gor">
      <li class="list-item" v-for="marka in data">
@@ -4300,12 +4303,13 @@ Vue.component('sitealtkisim',{
          
         }
  })
+ var pageId="";
   const routes = [
     { path: '/', component: urunler },
-    { path: '/order/opa/', name:'elif', component: endusukfiyat},
-
+    { path: '/urun/', name:'urun',component: urun},
+    { path: '/order/opa/', component: endusukfiyat},
     { path: '/order/ocd/', component: enyeniler },
-    { path: '/assa/asas', redirect: { name: 'elif' }}
+    { path: '/assa/asas', redirect: { name: 'urun' }}
   ]
   
   const router = new VueRouter({
