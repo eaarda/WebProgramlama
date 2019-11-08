@@ -33,7 +33,7 @@
       <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
    </head>
-   <body class="feature_rgba feature_supports feature_no-touchevents feature_csstransforms feature_csstransforms3d feature_objectfit feature_object-fit">
+   <body class="indicator-container indicator-loading"><!--indicator-container indicator-abs indicator-loading blockoverflow-->
       <div id="app">
          <a href="#"><img alt="Yukarı Çık" class="yukarikaydir" src="resimler/yc.png"></a>
          <div id="headerw_menu">
@@ -2177,6 +2177,9 @@
             </div>
          </div>
       </div>
+      <script>
+         setTimeout(function(){ document.querySelector('body').className="" }, 3000);
+      </script>
       <script type="text/javascript" src="./others/build.js"></script>
       <script type="text/javascript" src="./others/main.js"></script>
       <script type ="text/javascript" src ="./components/comp.js"></script>

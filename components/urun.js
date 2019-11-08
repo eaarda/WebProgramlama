@@ -3,7 +3,7 @@ Vue.component('headerwmenu',{
     <header>
         <div class="header-inner">
             <div class="wrapper">
-                <div class="header-top"><a href="https://www.ceptesok.com/" class="header-logo"><img src="./resimler/logo.svg"></a></div>
+                <div class="header-top"><a href="./index.html" class="header-logo"><img src="./resimler/logo.svg"></a></div>
                 <div class="header-mid">
                     <div class="mid-left">
                         <div class="left-button not-selected">
@@ -39,9 +39,9 @@ Vue.component('headerwmenu',{
                 </div>
                 <div class="header-bottom">
                     <ul class="bottom-menu">
-                        <li class="menu-item"><a href="https://www.ceptesok.com/et-tavuk-hindi-balik" data-menu="top-menu1" class="topmenu-trigger">Et, Tavuk,</br>Hindi</li>
-                        <li class="menu-item"><a href="https://www.ceptesok.com/sut-yogurt-ve-sut-urunleri" data-menu="top-menu2" class="topmenu-trigger">Süt, Yoğurt,<br>Süt Ürünleri</a></li>
-                        <li class="menu-item"><a href="https://www.ceptesok.com/kahvaltilik" data-menu="top-menu3" class="topmenu-trigger">Kahvaltılık</a></li>
+                        <li class="menu-item"><a href="./et.html" data-menu="top-menu1" class="topmenu-trigger">Et, Tavuk,</br>Hindi</li>
+                        <li class="menu-item"><a href="./sut.html" data-menu="top-menu2" class="topmenu-trigger">Süt, Yoğurt,<br>Süt Ürünleri</a></li>
+                        <li class="menu-item"><a href="./kahvaltilik.html" data-menu="top-menu3" class="topmenu-trigger">Kahvaltılık</a></li>
                         <li class="menu-item"><a href="https://www.ceptesok.com/yemeklik-malzemeler" data-menu="top-menu4" class="topmenu-trigger">Yemeklik<br>Malzemeler</a></li>
                         <li class="menu-item"><a href="https://www.ceptesok.com/icecek" data-menu="top-menu5" class="topmenu-trigger">İçecek</a></li>
                         <li class="menu-item"><a href="https://www.ceptesok.com/biskuvi-cikolata-kuruyemis" data-menu="top-menu6" class="topmenu-trigger">Bisküvi, Çikolata,<br>Kuruyemiş</a></li>
@@ -3723,11 +3723,11 @@ Vue.component('headerwmenu',{
     methods:{
      getCategories:function(parent){
          var result=[];
-        // console.log("Burdayız")
+         console.log("Burdayız")
          for(var i = 0 ; i< this.data.payload.categories.length;i++)
          {
              for(var j = 0; j<this.data.payload.categories[i].children.length;j++){
-                 //console.log(this.data.payload.categories[i].children[j].name)
+                 console.log(this.data.payload.categories[i].children[j].name)
                     if(this.data.payload.categories[i].children[j].parentid==parent){
                     result.push(this.data.payload.categories[i].children[j]);
                 }
@@ -3743,7 +3743,7 @@ Vue.component('headerwmenu',{
                 for(var k = 0; k<this.data.payload.categories[i].children[j].children.length;k++){
                         if(this.data.payload.categories[i].children[j].children[k].parentid==parentidd){
                           result.push(this.data.payload.categories[i].children[j].children[k]); 
-                        //  console.log("buu",this.data.payload.categories[i].children[j].children[k])
+                          console.log("buu",this.data.payload.categories[i].children[j].children[k])
                         }
                 }
             }
@@ -3757,13 +3757,13 @@ Vue.component('headerwmenu',{
         .then(data => {
          this.data = data;
          setTimeout(() => (this.gor = true), 3000);
-        // console.log("this.data",JSON.stringify(data.payload.categories[0].children[0].name))
+         console.log("this.data",JSON.stringify(data.payload.categories[0].children[0].name))
          this.gor=true;
           });
         
           
         }
- });
+      });
  Vue.component('sitealtkisim',{
     template : `
     <footer>

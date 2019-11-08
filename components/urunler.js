@@ -3,7 +3,7 @@ Vue.component('headerwmenu',{
     <header>
         <div class="header-inner">
             <div class="wrapper">
-                <div class="header-top"><a href="https://www.ceptesok.com/" class="header-logo"><img src="./resimler/logo.svg"></a></div>
+                <div class="header-top"><a href="./index.html" class="header-logo"><img src="./resimler/logo.svg"></a></div>
                 <div class="header-mid">
                     <div class="mid-left">
                         <div class="left-button not-selected">
