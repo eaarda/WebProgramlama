@@ -89,9 +89,9 @@ Vue.component('dortlu',{
                 </div>
                 <div class="header-bottom">
                     <ul class="bottom-menu">
-                        <li class="menu-item"><a href="https://www.ceptesok.com/et-tavuk-hindi-balik" data-menu="top-menu1" class="topmenu-trigger">Et, Tavuk,</br>Hindi</li>
-                        <li class="menu-item"><a href="https://www.ceptesok.com/sut-yogurt-ve-sut-urunleri" data-menu="top-menu2" class="topmenu-trigger">Süt, Yoğurt,<br>Süt Ürünleri</a></li>
-                        <li class="menu-item"><a href="https://www.ceptesok.com/kahvaltilik" data-menu="top-menu3" class="topmenu-trigger">Kahvaltılık</a></li>
+                        <li class="menu-item"><a href="./et.html" data-menu="top-menu1" class="topmenu-trigger">Et, Tavuk,</br>Hindi</li>
+                        <li class="menu-item"><a href="./sut.html" data-menu="top-menu2" class="topmenu-trigger">Süt, Yoğurt,<br>Süt Ürünleri</a></li>
+                        <li class="menu-item"><a href="./kahvaltilik.html" data-menu="top-menu3" class="topmenu-trigger">Kahvaltılık</a></li>
                         <li class="menu-item"><a href="https://www.ceptesok.com/yemeklik-malzemeler" data-menu="top-menu4" class="topmenu-trigger">Yemeklik<br>Malzemeler</a></li>
                         <li class="menu-item"><a href="https://www.ceptesok.com/icecek" data-menu="top-menu5" class="topmenu-trigger">İçecek</a></li>
                         <li class="menu-item"><a href="https://www.ceptesok.com/biskuvi-cikolata-kuruyemis" data-menu="top-menu6" class="topmenu-trigger">Bisküvi, Çikolata,<br>Kuruyemiş</a></li>

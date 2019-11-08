@@ -3938,7 +3938,7 @@ Vue.component('headerwmenu',{
         }  
     },
     created() {
-        fetch('https://www.ceptesok.com/api/v1/products?limit=52&order=rank&page=1&categoryId=1242')
+        fetch('https://www.ceptesok.com/api/v1/products?limit=52&order=rank&page=1&categoryId=1245')
         .then(response => response.json())
         .then(data => {
             this.data=data;
@@ -4015,7 +4015,7 @@ Vue.component('headerwmenu',{
         }
     },
     created() {
-        fetch('https://www.ceptesok.com/api/v1/products?limit=52&order=opa&page=1&categoryId=1242')
+        fetch('https://www.ceptesok.com/api/v1/products?limit=52&order=opa&page=1&categoryId=1245')
         .then(response => response.json())
         .then(data => {
             this.data=data;
@@ -4093,7 +4093,7 @@ Vue.component('headerwmenu',{
         }
     },
     created() {
-        fetch('https://www.ceptesok.com/api/v1/products?limit=52&order=opa&page=1&categoryId=1242')
+        fetch('https://www.ceptesok.com/api/v1/products?limit=52&order=ocd&page=1&categoryId=1245')
         .then(response => response.json())
         .then(data => {
             this.data=data;
@@ -4240,7 +4240,7 @@ Vue.component('headerwmenu',{
          
      },
      created() {
-        fetch('https://www.ceptesok.com/api/v1/products?limit=52&order=opa&page=1&categoryId=1242')
+        fetch('https://www.ceptesok.com/api/v1/products?limit=52&order=ocd&page=1&categoryId=1245')
         .then(response => response.json())
         .then(data => {
             var result= [];
