@@ -1712,3 +1712,19 @@ $.fn.hasData = function(e) {
 }), String.prototype.replaceAll = function(e, t) {
     return this.split(e).join(t)
 };
+
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.yukarikaydir').fadeIn();
+        } else {
+            $('.yukarikaydir').fadeOut();
+        }
+    });
+    $('.yukarikaydir').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+});
