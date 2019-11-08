@@ -11,6 +11,7 @@
         <meta property="og:title" content="Anasayfa - CEPTE ŞOK">
         <link rel="stylesheet" type="text/css" href="./others/build.css">
         <link rel="stylesheet" type="text/css" href="./others/sehir.css">
+        <link rel="stylesheet" type="text/css" href="./others/load.css">
         <link rel="shortcut icon" href="https://www.ceptesok.com/assets/img/favicon/favicon.ico">
         <link rel="icon" sizes="16x16 32x32 64x64" href="https://www.ceptesok.com/assets/img/favicon/favicon.ico">
         <link rel="icon" type="image/png" sizes="196x196" href="https://www.ceptesok.com/assets/img/favicon/favicon-192.png">
@@ -33,12 +34,15 @@
         <meta name="msapplication-config" content="/assets/img/favicon/browserconfig.xml">
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-     </head><body>
+     </head><body class="indicator-container indicator-loading">
          <div id="app">
             <headerwmenu></headerwmenu>
                     <urun></urun>
                   <sitealtkisim></sitealtkisim>
                 </div>
+                <script>
+                        setTimeout(function(){ document.querySelector('body').className="" }, 3000);
+                     </script>
         <script type="text/javascript" src="./others/build.js"></script>
         <script type="text/javascript" src="./others/main.js"></script>
         <script type ="text/javascript" src ="./components/urun.js"></script>
